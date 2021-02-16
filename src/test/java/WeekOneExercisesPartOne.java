@@ -14,6 +14,7 @@ public class WeekOneExercisesPartOne {
 
     @Test
     // TODO Code: What is the least amount of code we need to make this test pass?
+    // return results of equation for int actualSlicesPerPerson
     public void numberOfWholeSlicesForOnePizzaAndEightPeople() {
         int numberOfPeople = 8;
         int numberOfEightSlicePizzas = 1;
@@ -24,7 +25,6 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
     public void numberOfWholeSlicesFromOnePizzaAndEightPeople() {
         int numberOfPeople = 4;
         int numberOfEightSlicePizzas = 2;
@@ -35,8 +35,8 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
     // TODO RESPONSE: What operator is used to determine remainders?
+    // Modulus %
     public void leftoversWithFivePeopleAndTwoPizzas() {
         int numberOfPeople = 5;
         int numberOfEightSlicePizzas = 2;
@@ -46,18 +46,18 @@ public class WeekOneExercisesPartOne {
         assertEquals(1, actualLeftoverSlices);
     }
 
-    private int divideUpEightSlicePizzasEvenly(int numberOfPizzas, int numberOfPeople) {
-        return 0;
+    private int divideUpEightSlicePizzasEvenly(int numberOfEightSlicePizzas, int numberOfPeople) {
+        return numberOfEightSlicePizzas * 8 / numberOfPeople;
     }
 
-    private int determineLeftoverSlicesOfPizza(int numberOfPizzas, int numberOfPeople) {
-        return 0;
+    private int determineLeftoverSlicesOfPizza(int numberOfEightSlicePizzas, int numberOfPeople) {
+        return numberOfEightSlicePizzas * 8 % numberOfPeople;
     }
 
     @Test
-    @Disabled
     // TODO RESPONSE: In the variable declarations below, why is it necessary to place
     //  an 'f' after 4.3 but not after 1500 or 4?
+    // Because it specifies a position after the decimal.
     public void simpleInterestReturnsCorrectAmount() {
         float principalAmount = 1500;
         float interestRateAsAPercent = 4.3f;
@@ -79,6 +79,6 @@ public class WeekOneExercisesPartOne {
      * @return
      */
     private float calcSimpleInterest(float principal, float percentInterestRate, float numberOfYears) {
-        return 0;
+        return principal * (1 + (percentInterestRate / 100 * numberOfYears));
     }
 }
