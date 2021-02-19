@@ -7,7 +7,7 @@ public class WeekTwoExercisePartOne {
 
     /**
      * We can briefly summarize the scoring rules for bowling:
-     *  Each game, or “line” of bowling, includes ten turns, or “frames” for the bowler.
+     *  Each game, or line of bowling, includes ten turns, or frames for the bowler.
      *
      *  In each frame, the bowler gets up to two tries to knock down all the pins.
      *
@@ -34,7 +34,6 @@ public class WeekTwoExercisePartOne {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
     // TODO Response: Why did we start with this test?
     public void whenRollingAllGutterBallsScoreIsZero() {
         rollMany(20, 0);

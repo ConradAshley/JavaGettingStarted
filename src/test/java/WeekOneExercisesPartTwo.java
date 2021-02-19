@@ -9,15 +9,16 @@ public class WeekOneExercisesPartTwo {
 
     // TODO Response: Why would you never refactor if you had a failing test?
 
+    final double ROUND_TO_PERCENT = .001;
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAMale() {
         char gender = 'M';
         int weightInPounds = 185;
         int ouncesOfAlcoholConsumed = 3;
         float hoursSinceLastDrink = 2;
 
-        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+//        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+        float actualBAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
 
         assertEquals(0.03, actualBAC, .001);
     }
@@ -30,7 +31,9 @@ public class WeekOneExercisesPartTwo {
         int ouncesOfAlcoholConsumed = 5;
         float hoursSinceLastDrink = 1;
 
-        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+//        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+        float actualBAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .66) - (hoursSinceLastDrink * .015));
+
 
         assertEquals(0.11, actualBAC, .001);
     }
@@ -54,10 +57,41 @@ public class WeekOneExercisesPartTwo {
      * @param hoursSinceLastDrink
      * @return
      */
+    @Test
+    public void myBAC() {
+        char myGender = 'F';
+        int myWeight = 160;
+        int ouncesConsumed = 5;
+        float myHoursSinceLastDrink = 1;
 
+        float myActualBAC = calculateBAC(myGender, myWeight, ouncesConsumed, myHoursSinceLastDrink);
+
+        assertEquals(0.091, myActualBAC, .001);
+    }
     private float calculateBAC(char gender, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
         // TODO RESPONSE: In the PluralSight video, you learned of three ways to make decisions based on the value
         //   in the gender variable. Implement this method using one way, and describe how the other ways could work.
-        return 0.0f;
+        // I chose to do a simple if else statement, could also use a switch statement for this. I tried the switch as well and
+        // tested it. Shown below.
+
+        float bAC = 0;
+
+//        switch (gender) {
+//            case 'F' :
+//                bAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .66) - (hoursSinceLastDrink * .015));
+//                break;
+//            case 'M' :
+//                bAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
+//                break;
+//
+//        }
+//        return bAC;
+
+        if (gender == 'F')
+            bAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .66) - (hoursSinceLastDrink * .015));
+        else if (gender == 'M')
+            bAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
+        return bAC;
     }
+
 }
