@@ -24,7 +24,6 @@ public class WeekOneExercisesPartTwo {
     }
 
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAFemale() {
         char gender = 'F';
         int weightInPounds = 135;
