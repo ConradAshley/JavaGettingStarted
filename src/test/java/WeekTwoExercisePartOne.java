@@ -35,6 +35,7 @@ public class WeekTwoExercisePartOne {
 
     @Test
     // TODO Response: Why did we start with this test?
+    // Because it is the easiest test. Work from easy test to hard tests.
     public void whenRollingAllGutterBallsScoreIsZero() {
         rollMany(20, 0);
 
@@ -44,8 +45,9 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
     // TODO Response:  If the above test works with open frames, why is this test necessary?
+    // To ensure that it works when the frames are not open and the bowler did not
+    // roll a spare or a strike.
     public void whenRollingOpenFrameScoreIsSumOfRolls() {
         rollMany(20, 1);
 
@@ -56,7 +58,6 @@ public class WeekTwoExercisePartOne {
 
     // TODO CODE: Start here
     @Test
-    @Disabled
     public void whenRollingSpareFrameScoreIsTenPlusNextRoll() {
         bowlingGame.roll(3);
         bowlingGame.roll(7);
@@ -69,7 +70,6 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
     public void whenRollingStrikeFrameScoreIsTenPlusNextTwoRolls() {
         bowlingGame.roll(10);
         bowlingGame.roll(7);
@@ -82,6 +82,8 @@ public class WeekTwoExercisePartOne {
     }
 
     //TODO Response: Why don't we need any more tests than these?
+    //These cover each scenario we would encounter in bowling from the easiest
+    //to the more difficult scoring.
 
     private void rollMany(int rollCount, int pins) {
         for(int i = 0; i < rollCount; i++) {
