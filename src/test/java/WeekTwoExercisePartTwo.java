@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Implement each of the tests below in order within the src/main/java/FizzBuzz class
  * Make a Git commit after implementing each test. Add only the minimum amount of code required
- * for each test case to make that test pass. This may innclude just putting in a literal value...
+ * for each test case to make that test pass. This may include just putting in a literal value...
  * do not add any additional code.
  *
  * Hint:  If you complete implementing a test and the next test passes w/o any changes to FizzBuzz.java,
@@ -17,9 +17,9 @@ public class WeekTwoExercisePartTwo {
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
 
     // TODO Response: Why would you never refactor if you had a failing test?
+    // you don't want to commit bad code
 
     @Test
-    @Disabled
     public void sendingOneShouldReturnStringOne(){
         // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
         // TODO: Implement the code to make this test pass
