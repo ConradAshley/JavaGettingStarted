@@ -21,7 +21,7 @@ public class WeekTwoExercisePartTwo {
 
     @Test
     public void sendingOneShouldReturnStringOne(){
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: Just added an if statement, that if number == 1 return number.toString();
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
         FizzBuzz fb = new FizzBuzz();
@@ -33,9 +33,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingTwoShouldReturnStringTwo(){
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: Added else if to say if number == 2 to return 2 to string.
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -48,7 +47,6 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingThreeShouldReturnStringFizz() {
         // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
         // TODO: Implement the code to make this test pass
@@ -63,9 +61,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingAnyMultipleOfThreeShouldReturnStringFizz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: If statement for if number == 3 return Fizz
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -78,9 +75,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingAnyMultipleOfFiveOfThreeShouldReturnStringBuzz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: If statement, if number modulus 5 == 0, return Buzz
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -93,9 +89,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingAnyMultipleOfThreeAndFiveOfThreeShouldReturnStringFizzBuzz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: If number modulus 3 == 0 and number modulus 5 == 0 return FizzBuzz
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
