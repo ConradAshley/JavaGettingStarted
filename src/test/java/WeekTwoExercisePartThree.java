@@ -1,4 +1,5 @@
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.Disabled;
@@ -41,7 +42,6 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
     public void sendingNotAFridayTheThirteenthDateReturnsFalse() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -85,7 +85,7 @@ public class WeekTwoExercisePartThree {
 
     @Test
     @Disabled
-    public void sendingTwentyNinteenReturnsTwoFridayTheThirteenths() {
+    public void sendingTwentyNineteenReturnsTwoFridayTheThirteenths() {
         //  TODO: write this test and, if necessary, make any changes to make it pass
         //  TODO: don't forget to commit after passing the test
     }
@@ -101,14 +101,21 @@ public class WeekTwoExercisePartThree {
 
     public LocalDate[] unluckyDatesByYear(int year) {
         LocalDate[] localDates = new LocalDate[12];
-
+//        int i = 0;
+//        for (int m = 1; m < 13; m++){
+//            if
+//        }
         return localDates;
     }
 
     public boolean isUnluckyDate(int year, int month, int day) {
         if (day == 13) {
+            LocalDate thisDay = LocalDate.of(year, month, day);
+            if(thisDay.getDayOfWeek() == DayOfWeek.FRIDAY)
             return true;
         }
         return false;
     }
 }
+
+
